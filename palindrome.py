@@ -6,12 +6,25 @@ def is_palindrome(s):
 
 def main():
     print("Palindrome Checker")
-    input_str = input("Masukkan string (huruf + angka): ")
-
-    if is_palindrome(input_str):
-        print("Hasil: Ini adalah palindrom.")
-    else:
-        print("Hasil: Bukan palindrom.")
+    print("Masukkan string yang ingin dicek (pisahkan dengan koma)")
+    print("Contoh: racecar, hello, A man a plan a canal Panama")
+    
+    input_str = input("Masukkan string: ")
+    
+    # Pisahkan string berdasarkan koma dan hapus spasi di awal/akhir
+    strings = [s.strip() for s in input_str.split(',')]
+    
+    print("\nHasil:")
+    print("-" * 50)
+    
+    for i, string in enumerate(strings, 1):
+        if string:  # Pastikan string tidak kosong
+            if is_palindrome(string):
+                print(f"{i}. '{string}' → Palindrom ✓")
+            else:
+                print(f"{i}. '{string}' → Bukan palindrom ✗")
+        else:
+            print(f"{i}. (string kosong) → Diabaikan")
 
 
 if __name__ == "__main__":
