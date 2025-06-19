@@ -7,8 +7,13 @@
 
 **💡 Penjelasan Program**
 
-1. Fungsi `is_palindrome(s)` bertugas menyaring input agar hanya mengandung huruf dan angka (`isalnum()`), lalu mengubah huruf menjadi huruf kecil (`lower()`) agar tidak sensitif terhadap kapitalisasi. Setelah itu, string dibandingkan dengan versi terbaliknya menggunakan `[::-1]`.
+1. Fungsi `is_palindrome(s)` bertugas menyaring karakter dalam string agar hanya menyisakan huruf dan angka menggunakan `isalnum()`, lalu mengubah semua huruf menjadi huruf kecil (`lower()`) agar pengecekan tidak sensitif terhadap kapitalisasi. String kemudian dibandingkan dengan versi terbaliknya (`[::-1]`) untuk menentukan apakah merupakan palindrom.
 
-2. Fungsi `main()` digunakan untuk menerima input dari pengguna menggunakan `input()`, kemudian memanggil fungsi `is_palindrome()` untuk mengecek apakah string tersebut merupakan palindrom.
+2. Fungsi `main()` bertanggung jawab untuk:
+   - Menampilkan informasi dan petunjuk kepada pengguna.
+   - Menerima input berupa beberapa string yang dipisahkan koma.
+   - Membersihkan tiap string dari spasi di awal dan akhir.
+   - Melakukan iterasi terhadap setiap string dan memanggil fungsi `is_palindrome()` untuk mengecek masing-masing string.
 
-3. Output program menampilkan pesan apakah input tersebut termasuk palindrom atau bukan, berdasarkan hasil pengecekan.
+3. Program akan mencetak hasil pengecekan untuk setiap string, menandai apakah string tersebut adalah palindrom (✓) atau bukan palindrom (✗). String kosong akan diabaikan.
+
